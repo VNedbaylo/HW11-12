@@ -1,0 +1,80 @@
+.cb_hidden {
+            display: none;
+        }
+
+        .navi {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+            background-color: gainsboro;
+        }
+
+        .button {
+            margin: 20px 10px;
+            border: 2px double black;
+            background-color: #a1d8f5;
+            color: blue;
+            padding: 5px;
+        }
+
+        .mod_list {
+            display: none;
+            width: 35%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border: 3px solid red;
+            margin: 5px auto;
+        }
+
+        .mod_list>:nth-child(odd) {
+            background-color: rgba(255, 248, 220, 0.7);
+            align-self: flex-end;
+        }
+
+        .mod_list>:nth-child(even) {
+            background-color: rgba(246, 220, 255, 0.7);
+            align-self: flex-start;
+        }
+
+        #cb_frd:checked~.cars #frd,
+        #cb_toy:checked~.cars #toy,
+        #cb_hon:checked~.cars #hon,
+        #cb_bmw:checked~.cars #bmw,
+        #cb_ldr:checked~.cars #ldr {
+            display: flex;
+        }
+
+        #cb_frd:checked~.navi #bn_frd,
+        #cb_toy:checked~.navi #bn_toy,
+        #cb_hon:checked~.navi #bn_hon,
+        #cb_bmw:checked~.navi #bn_bmw,
+        #cb_ldr:checked~.navi #bn_ldr {
+            background-color: yellow;
+        }
+
+        .cars .mod_list {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center
+        }
+
+        #cb_frd:checked~.cars .mod_list {
+            background-image: url(../img/frd_logo.JPG);
+        }
+
+        #cb_toy:checked~.cars .mod_list {
+            background-image: url(../img/toy_logo.JPG);
+        }
+
+        #cb_hon:checked~.cars .mod_list {
+            background-image: url(../img/hon_logo.JPG);
+        }
+
+        #cb_bmw:checked~.cars .mod_list {
+            background-image: url(../img/bmw_logo.JPG);
+        }
+
+        #cb_ldr:checked~.cars .mod_list {
+            background-image: url(../img/LdR_logo.JPG);
+        }
